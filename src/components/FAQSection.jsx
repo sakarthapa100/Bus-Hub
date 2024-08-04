@@ -147,4 +147,3 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
-// good

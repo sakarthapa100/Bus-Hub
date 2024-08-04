@@ -9,7 +9,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { MdOutlinePerson } from "react-icons/md";
 import { LuLogIn } from "react-icons/lu";
 import { FaUserEdit } from "react-icons/fa";
-
+import ManageTicket from './ManageTicket';
 
 
 
@@ -52,7 +52,7 @@ const Navbar = () => {
 <div className='flex text-white items-center gap-8 p-4  '>
 <div className=' flex items-center gap-2'>
 <IoTicketOutline />
-<span>Manage Tickets</span>
+<span className='bg-blue-600 text-white '><ManageTicket /> </span>
 </div>
 <div className=' flex items-center gap-2' >
 <MdOutlinePerson />
@@ -60,11 +60,11 @@ const Navbar = () => {
 </div>
 <div className=' flex items-center gap-2' >
 <LuLogIn />
-<span>Log In</span>
+<span> <a href="/login"> Log In </a></span>
 </div>
 <div className=' flex items-center gap-2' >
 <FaUserEdit />
-<span>Sign up</span>
+<span> <a href="/signup"> Sign up </a></span>
 </div>
 
 

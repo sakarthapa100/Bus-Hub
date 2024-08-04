@@ -6,6 +6,41 @@ import { FaTwitter } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
 const Footer = () => {
+  const footerLinks = {
+    'About Us': [
+      'Our Story',
+      'Mission & Vision',
+      'Careers',
+      'Values',
+      'Our Team',
+      'Contact Us',
+      'Sitemap'
+    ],
+    'Info': [
+      'Investor Relations',
+      'Contact Us',
+      'Sitemap',
+      'Offers',
+    'Blog',
+      'FAQs',
+      'Privacy Policy'
+    ],
+    'Global Sites': [
+      'United States',
+      'United Kingdom',
+      'Canada',
+      'Australia',
+      'Nepal'
+
+    ],
+    'Our Partners': [
+      'Partner A',
+      'Partner B',
+      'Partner C',
+      'Partner D'
+    ]
+  };
+
   return (
     <footer className="bg-gray-100 py-8 px-4">
       <div className="container mx-auto">
@@ -19,11 +54,11 @@ const Footer = () => {
           </div>
 
           {/* Footer Columns */}
-          {['About Us', 'Info', 'Global Sites', 'Our Partners'].map((title, index) => (
+          {Object.entries(footerLinks).map(([title, links], index) => (
             <div key={index} className="w-full md:w-1/6 mb-6 md:mb-0">
               <h3 className="font-bold mb-4">{title}</h3>
               <ul className="text-sm">
-                {['Link 1', 'Link 2', 'Link 3', 'Link 4'].map((link, linkIndex) => (
+                {links.map((link, linkIndex) => (
                   <li key={linkIndex} className="mb-2">
                     <a href="#" className="text-gray-600 hover:text-gray-800">{link}</a>
                   </li>

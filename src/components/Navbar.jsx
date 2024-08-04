@@ -1,6 +1,6 @@
 import React from 'react'
 import buslogo from '../assets/buslogo.png'
-import { CiHome } from "react-icons/ci";
+import { MdHome } from "react-icons/md";
 import { PiTicketBold } from "react-icons/pi";
 import { LuContact2 } from "react-icons/lu";
 import { BiSupport } from "react-icons/bi";
@@ -22,25 +22,25 @@ const Navbar = () => {
 <div className='justify-center items-center'>
   <ul className='flex  items-center justify-center p-7 gap-11'>
     <div className='flex items-center gap-2'>
-    <CiHome /> 
+    <MdHome /> 
        <li ><a href="/"> Home</a></li> 
     </div>
     <div className='flex items-center gap-2'>
       <PiTicketBold />
-    <li><a href="/">Book Tickets</a></li> 
+    <li><a href="/book">Book Tickets</a></li> 
     </div>
     <div className='flex items-center gap-2'>
 
  <IoMdInformationCircleOutline />
-    <li><a href="/">About Us</a></li>
+    <li><a href="/about">About Us</a></li>
     </div>
     <div className='flex items-center gap-2'>
        <LuContact2 />
-    <li><a href="/">Contact Us</a></li> 
+    <li><a href="/contact">Contact Us</a></li> 
     </div>
     <div className='flex items-center gap-2'>
   <BiSupport />
-    <li><a href="/">Help/Support</a></li>
+    <li><a href="/help">Help/Support</a></li>
     </div>
   </ul>
 </div>
