@@ -11,6 +11,7 @@ import Aboutus from './pages/Aboutus'
 import HelpSupport from './pages/HelpSupport'
 import BookTicket from './pages/BookTicket'
 import Signup from './pages/Signup'
+import BusSearchResults from './components/BusSearchResult'
 function App() {
 
 
@@ -26,6 +27,7 @@ function App() {
               <Route path='/help' element={<HelpSupport />} />
               <Route path='/book' element={<BookTicket />} />
               <Route path='/signup' element={<Signup />} />
+              <Route path="/search-results" element={<BusSearchResults />} />
           </Routes>
        <Footer />
       </BrowserRouter>
