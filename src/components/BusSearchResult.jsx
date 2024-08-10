@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 // Header Component
 const Header = ({ origin, destination }) => (
@@ -92,6 +93,7 @@ const Sidebar = () => (
 
 // Seat Selection Modal Component
 const SeatSelectionModal = ({ isOpen, onClose, busDetails }) => {
+  const navigate = useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [boardingPoint, setBoardingPoint] = useState('');
 
@@ -130,32 +132,9 @@ const SeatSelectionModal = ({ isOpen, onClose, busDetails }) => {
   };
 
   const handlePayment = () => {
-    const amount = calculateFare();
-    const returnUrl = 'https://yourwebsite.com/payment-callback'; // Replace with your callback URL
-
-    // e-Sewa parameters
-    const scd = 'YOUR_SERVICE_CODE'; // Replace with your e-Sewa service code
-    const key = '8gBm/:&EnhH.1/q'; // Replace with your e-Sewa secret key if needed
-    const amountStr = amount.toFixed(2);
-    
-    // Prepare payment parameters
-    const paymentParams = new URLSearchParams({
-      amt: amountStr,
-      psc: 0,
-      pdc: 0,
-      txAmt: amountStr,
-      tAmt: amountStr,
-      productInfo: `Seats: ${selectedSeats.join(', ')}, Boarding Point: ${boardingPoint}`,
-      returnUrl: returnUrl,
-      scd: scd,
-      // Include additional required fields here
+    navigate('/booking-details', {
+      state: { selectedSeats, boardingPoint, fare: calculateFare() },
     });
-
-    // Construct the e-Sewa payment URL
-    const eSewaUrl = `https://esewa.com.np/epay/main?${paymentParams.toString()}`;
-
-    // Redirect to e-Sewa payment page
-    window.location.href = eSewaUrl;
   };
 
   return (
@@ -251,6 +230,7 @@ const SeatSelectionModal = ({ isOpen, onClose, busDetails }) => {
     </div>
   );
 };
+
 // Bus Result Component
 const BusResult = ({ bus, origin, destination }) => {
   const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);

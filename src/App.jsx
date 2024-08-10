@@ -12,6 +12,7 @@ import HelpSupport from './pages/HelpSupport'
 import BookTicket from './pages/BookTicket'
 import Signup from './pages/Signup'
 import BusSearchResults from './components/BusSearchResult'
+import BookingDetails from './components/BookingDetails'
 function App() {
 
 
@@ -28,6 +29,14 @@ function App() {
               <Route path='/book' element={<BookTicket />} />
               <Route path='/signup' element={<Signup />} />
               <Route path="/search-results" element={<BusSearchResults />} />
+              <Route
+  path="/booking-details"
+  element={
+    <BookingDetails
+    
+    />
+  }
+/>
           </Routes>
        <Footer />
       </BrowserRouter>
