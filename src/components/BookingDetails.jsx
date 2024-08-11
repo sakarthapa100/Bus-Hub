@@ -36,7 +36,7 @@ const BookingDetails = () => {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
               <div>
@@ -48,7 +48,7 @@ const BookingDetails = () => {
                   <input
                     type="text"
                     placeholder="Mobile number"
-                    className="flex-1 block w-full border border-gray-300 rounded-r-md focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    className="flex-1 block w-full border p-3  border-gray-300 rounded-r-md focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -58,7 +58,7 @@ const BookingDetails = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 p-3  rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
           </form>

@@ -19,10 +19,10 @@ const BookTickets = () => {
   };
 
   const popularRoutes = [
-    { from: 'New York', to: 'Boston' },
-    { from: 'Los Angeles', to: 'San Francisco' },
-    { from: 'Chicago', to: 'Detroit' },
-    { from: 'Miami', to: 'Orlando' },
+    { from: 'Pokhara ', to: 'Kathmandu' },
+    { from: 'Kathmandu', to: 'Birgung' },
+    { from: 'Pokhara', to: 'Chitwan' },
+    { from: 'Kathmandu', to: 'Vairawa' },
   ];
 
   const busOptions = [
@@ -47,7 +47,7 @@ const BookTickets = () => {
                     <FaMapMarkerAlt className="text-gray-400" />
                   </div>
                   <input type="text" name="from" id="from" required
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm p-3 border-gray-300 rounded-md"
                     placeholder="Departure City"
                     onChange={handleChange} />
                 </div>
@@ -59,7 +59,7 @@ const BookTickets = () => {
                     <FaMapMarkerAlt className="text-gray-400" />
                   </div>
                   <input type="text" name="to" id="to" required
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm p-3  border-gray-300 rounded-md"
                     placeholder="Arrival City"
                     onChange={handleChange} />
                 </div>
@@ -67,11 +67,11 @@ const BookTickets = () => {
               <div>
                 <label htmlFor="date" className="block text-sm font-medium text-gray-700">Date</label>
                 <div className="mt-1 relative rounded-md shadow-sm">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex p-3 items-center pointer-events-none">
                     <FaCalendarAlt className="text-gray-400" />
                   </div>
                   <input type="date" name="date" id="date" required
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    className="focus:ring-indigo-500 focus:border-indigo-500 block p-3 w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                     onChange={handleChange} />
                 </div>
               </div>
