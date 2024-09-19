@@ -9,5 +9,3 @@ Currently, two official plugins are available:
 # Bus-Hub
 # This is the website for the online bus ticket system
 .. 
-..
-..
