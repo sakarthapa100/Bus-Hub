@@ -2,7 +2,8 @@ import React from 'react'
 import buslogo from '../assets/buslogo.png'
 import { MdHome } from "react-icons/md";
 import { PiTicketBold } from "react-icons/pi";
-import { LuContact2 } from "react-icons/lu";
+import { LuContact } from 'react-icons/lu' // ✅ This one exists
+
 import { BiSupport } from "react-icons/bi";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 
@@ -35,7 +36,7 @@ const Navbar = () => {
     <li><a href="/about">About Us</a></li>
     </div>
     <div className='flex items-center gap-2'>
-       <LuContact2 />
+       <LuContact />
     <li><a href="/contact">Contact Us</a></li> 
     </div>
     <div className='flex items-center gap-2'>
