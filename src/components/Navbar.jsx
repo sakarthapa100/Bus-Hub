@@ -34,7 +34,7 @@ const Navbar = () => {
 
  <IoMdInformationCircleOutline />
     <li><a href="/about">About Us</a></li>
-    </div>
+    </div> 
     <div className='flex items-center gap-2'>
        <LuContact />
     <li><a href="/contact">Contact Us</a></li> 

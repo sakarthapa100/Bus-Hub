@@ -4,6 +4,8 @@ import FAQSection from '../components/FAQSection'
 import ReviewsAndRatings from '../components/ReviewandRatings'
 import BusCarousel from '../components/BusCarousel'
 import Hero from '../components/Hero'
+import WhyChooseUs from '../components/WhyChooseUs'
+import ReviewRatingSection from '../components/ReviewRating'
 
 const Home = () => {
   return (
@@ -11,13 +13,15 @@ const Home = () => {
       <BusSearch /> 
      
       <Hero />
-      <FAQSection />
+      
 
          <BusCarousel />
-      
-      
+         <ReviewRatingSection />
+         <FAQSection />
+      <WhyChooseUs />
+   
      
-      <ReviewsAndRatings />
+      {/* <ReviewsAndRatings /> */}
     </div>
   )
 }
